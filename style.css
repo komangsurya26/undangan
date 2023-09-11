@@ -138,11 +138,12 @@ body {
 
 
 /* Info */
+
 .info {
-    background-color: #212529;
     color: white;
-    padding-top: 10rem;
+    padding-top: 2rem;
     padding-bottom: 8rem;
+    background: rgb(58, 58, 58);
 }
 
 .info a {
@@ -171,8 +172,8 @@ body {
 
 .timeline {
     list-style: none;
-    padding: 1.4rem 0;
-    margin-top: 1rem;
+    padding:0;
+    margin-top: 6rem;
     position: relative;
     color: white;
 }
@@ -337,6 +338,26 @@ body {
     height: 100%;
 }
 
+.warna-btn {
+    background-color: var(--colbut);
+    color: black;
+}
+
+.warna-btn:hover {
+    background-color: #fff;
+}
+
+footer {
+    padding: 3rem;
+    color: #fff;
+    font-size: 15px;
+}
+
+footer svg:hover {
+    color: var(--colbut);
+}
+
+
 /* Media Query */
 
 /* Laptop */
@@ -345,7 +366,7 @@ body {
         font-size: 100%;
     }
     .foto-awal {
-        width: 300px;
+        width: 350px;
         height: 350px;
     }
 
@@ -422,7 +443,7 @@ body {
         margin-top: 2px;
     }
     .galery .container {
-        padding-top: 8rem;
+        padding-top: 3rem;
     }
     .story {
         padding-bottom: 2rem;
