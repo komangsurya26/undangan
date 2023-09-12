@@ -40,7 +40,7 @@ body {
 }
 
 .hero h1 {
-    font-family: var(--tangan);
+    font-family: var(--om);
     font-size: 5rem;
     color: var(--colbut);
 }
@@ -83,7 +83,7 @@ body {
 
 
 .navbar-brand {
-    font-family: var(--tangan);
+    font-family: var(--om);
     font-size: 3rem;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .home .boxs h3 {
-    font-family: var(--tangan);
+    font-family: var(--om);
     color: #C69C6D;
     font-size: 3rem;
 }
@@ -113,28 +113,6 @@ body {
     color: white;
 }
 
-
-
-
-.home .om {
-    width: 25%;
-}
-
-
-.home .couple h3 {
-    font-family: var(--tangan);
-    color: var(--colbut);
-    font-size: 2.4rem;
-}
-
-.home .couple p {
-    color: white;
-}
-
-.home .couple img {
-    width: 100%;
-    border: 4px solid var(--colbut);
-}
 
 
 /* Info */
@@ -269,6 +247,10 @@ body {
     left: -12px;
     right: auto;
 }
+.timeline-heading h3 {
+    font-family: var(--om);
+    color: #C69C6D;
+}
 
 
 /* galery */
@@ -313,7 +295,7 @@ body {
 .foto-awal {
    width: 300px;
    height: 200px;
-   border: 7px solid var(--colbut);
+   border: 4px solid var(--colbut);
 }
 
 .ring {
@@ -392,8 +374,8 @@ footer svg:hover {
         padding: 15rem 0;
         text-align: center;
     }
-
 }
+
 
 
 /* Hp */
@@ -428,6 +410,36 @@ footer svg:hover {
     .boxs {
         padding: 15rem 0;
         text-align: center;
+    }
+    .timeline::before {
+        left: 50px;
+    }
+
+    .timeline li .timeline-image {
+        left: 10px;
+        margin-left: 45px;
+        top: 16px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .timeline li .timeline-panel {
+        width: calc(100% - 130px);
+        float: right;
+    }
+
+    .timeline li .timeline-panel::before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    .timeline li .timeline-panel::after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -13px;
+        right: auto;
     }
 }
 
