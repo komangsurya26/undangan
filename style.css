@@ -480,6 +480,7 @@ footer svg:hover {
         left: 50%;
         bottom: 4%;
         font-size: 4rem;
+        transform: translate(-50%, -50%);
     }
    
 }
