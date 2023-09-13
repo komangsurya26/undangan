@@ -26,14 +26,19 @@
         class="hero w-100 h-100 p-3 mx-auto d-flex justify-content-center text-center align-items-center text-white">
         <main>
 
-            <h4>Kepada Bapak/Ibu Saudara/i,</h4>
             <h1>Komang & Dea</h1>
-            <p>Akan Melangsungkan Pernikahan dalam :</p>
-            <div class="simply-countdown"></div>
-            <a href="#home" class="undangan" onclick="enableScroll()">
-                <ion-icon name="mail-open-outline" class="custom-icon"></ion-icon>
-                Undangan
-            </a>
+            
+            <p>Kepada Bapak/Ibu/Saudara/i</p>
+            <div class="yth">
+                <span></span>
+            </div>
+            <h6>Mohon maaf apabila ada kesalahan penulisan nama/gelar</h6>
+            <div class="pt-3">
+                <a href="#home" class="undangan" onclick="enableScroll()">
+                    <ion-icon name="mail-open-outline" class="custom-icon"></ion-icon>
+                    Undangan
+                </a>
+            </div>
         </main>
     </section>
 
@@ -461,6 +466,16 @@
         isPlay = !isPlay
     }
     disableScroll()
+</script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search)
+    const nama = urlParams.get('nama') || 'Bapak/Ibu/Saudara/I,'
+    console.log(nama);
+
+    const namaUrl = document.querySelector('.hero .yth span')
+    namaUrl.innerText = nama
+
 </script>
 
 
