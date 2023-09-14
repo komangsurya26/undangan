@@ -381,7 +381,7 @@
         <audio id="song" autoplay loop>
             <source src="https://res.cloudinary.com/dgamlqpae/video/upload/v1694660984/audiomass-output_qt7gaj.mp3">
         </audio>
-        <div class="audio-icon" style="display: none;">
+        <div class="audio-icon">
             <i class="bi bi-pause-circle"></i>
         </div>
     </div>
@@ -427,12 +427,12 @@
 
 </script>
 
-<script>
+<!-- <script>
     // const rootElement = document.querySelector(':root')
     const song = document.querySelector('#song')
     const audioIcon = document.querySelector('.audio-icon')
     const audioKu = document.querySelector('.audio-icon i')
-    // let isPlay = true
+    let isPlay = true
 
     // function disableScroll() {
     //     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -447,12 +447,12 @@
     //     window.onscroll = function () { }
     //     rootElement.style.scrollBehavior = 'smooth';
     //     playAudio()
-    //     // localStorage.setItem('opened', 'true')    
     // }
-
+    
+    // localStorage.setItem('opened', 'true')    
     audioIcon.style.display = 'flex'
     song.play();
-    isPlay = true;
+    // isPlay = true;
 
     // function playAudio() {
     // }
@@ -474,7 +474,7 @@
         isPlay = !isPlay
     }
     // disableScroll()
-</script>
+</script> -->
 
 <script>
     const urlParams = new URLSearchParams(window.location.search)
