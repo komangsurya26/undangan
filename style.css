@@ -17,6 +17,10 @@ body {
     background-color: black;
 }
 
+body.lock-scroll {
+    overflow: hidden;
+}
+
 .video {
     min-height: 100vh;
     position: absolute;

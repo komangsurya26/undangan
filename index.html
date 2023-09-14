@@ -32,7 +32,7 @@
             </div>
             <h6>Mohon maaf apabila ada kesalahan penulisan nama/gelar</h6>
             <div class="pt-3">
-                <a href="#home" class="undangan" onclick="playAudio()">
+                <a href="#home" class="undangan" onclick="enableScroll()">
                     <ion-icon name="mail-open-outline" class="custom-icon"></ion-icon>
                     Undangan
                 </a>
@@ -381,7 +381,7 @@
         <audio id="song" autoplay loop>
             <source src="https://res.cloudinary.com/dgamlqpae/video/upload/v1694660984/audiomass-output_qt7gaj.mp3">
         </audio>
-        <div class="audio-icon">
+        <div class="audio-icon" style="display: none;">
             <i class="bi bi-pause-circle"></i>
         </div>
     </div>
@@ -427,40 +427,49 @@
 
 </script>
 
-<!-- <script>
-    // const rootElement = document.querySelector(':root')
+<script>
+    const rootElement = document.querySelector(':root')
     const song = document.querySelector('#song')
     const audioIcon = document.querySelector('.audio-icon')
     const audioKu = document.querySelector('.audio-icon i')
-    let isPlay = true
+    let isPlay = false
 
-    // function disableScroll() {
-    //     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    //     scrollLeft = window.pageX0ffset || document.documentElement.scrollLeft;
+    function lockScreen() {
+    document.body.classList.add('lock-scroll');
+    }
 
-    //     window.onscroll = function () {
-    //         window.scrollTo(scrollTop, scrollLeft);
-    //     }
-    //     rootElement.style.scrollBehavior = 'auto'
-    // }
-    // function enableScroll(params) {
-    //     window.onscroll = function () { }
-    //     rootElement.style.scrollBehavior = 'smooth';
-    //     playAudio()
-    // }
-    
-    // localStorage.setItem('opened', 'true')    
-    audioIcon.style.display = 'flex'
-    song.play();
-    // isPlay = true;
+    function unlockScreen() {
+    document.body.classList.remove('lock-scroll');
+    }
+    function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-    // function playAudio() {
-    // }
+        window.onscroll = function () {
+            window.scrollTo(scrollTop, scrollLeft);
+        }
+        rootElement.style.scrollBehavior = 'auto'
+        lockScreen()
+    }
 
+    function enableScroll() {
+        window.onscroll = function () { }; 
+        rootElement.style.scrollBehavior = 'smooth';
+        playAudio()
+        unlockScreen()
+        // localStorage.setItem('opened', 'true')
+    }
+
+    function playAudio() {
+        audioIcon.style.display = 'flex'
+        song.play();
+        isPlay = true;
+    }
 
     // if (!localStorage.getItem('opened')) {
     //     disableScroll()
     // }
+
     audioIcon.onclick = function () {
         if (isPlay) {
             song.pause()
@@ -473,8 +482,9 @@
         }
         isPlay = !isPlay
     }
-    // disableScroll()
-</script> -->
+    disableScroll()
+</script>
+
 
 <script>
     const urlParams = new URLSearchParams(window.location.search)
