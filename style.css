@@ -17,8 +17,6 @@ body {
     background-color: black;
 }
 
-
-
 .video {
     min-height: 100vh;
     position: absolute;
@@ -69,6 +67,7 @@ body {
     border-radius: 5px;
     padding: 6px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .custom-icon {
@@ -85,7 +84,6 @@ body {
     display: inline-block;
     background-color: #3A3A3A;
 }
-
 
 
 /* Navbar */
@@ -130,7 +128,6 @@ body {
     color: white;
     padding-top: 2rem;
     padding-bottom: 8rem;
-    background: rgb(58, 58, 58);
 }
 
 .info a {

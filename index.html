@@ -25,16 +25,14 @@
     <section id="hero"
         class="hero w-100 h-100 p-3 mx-auto d-flex justify-content-center text-center align-items-center text-white">
         <main>
-
             <h1>Komang & Dea</h1>
-            
             <p>Kepada Bapak/Ibu/Saudara/i</p>
             <div class="yth">
                 <span></span>
             </div>
             <h6>Mohon maaf apabila ada kesalahan penulisan nama/gelar</h6>
             <div class="pt-3">
-                <a href="#home" class="undangan" onclick="enableScroll()">
+                <a href="#home" class="undangan" onclick="playAudio()">
                     <ion-icon name="mail-open-outline" class="custom-icon"></ion-icon>
                     Undangan
                 </a>
@@ -60,7 +58,7 @@
                         laboriosam inventore reprehenderit ad nemo deserunt sit, dolorum laborum, ducimus </p>
                 </div>
             </div>
-    
+
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-md-4">
@@ -260,6 +258,11 @@
                     <h2>INFORMASI ACARA</h2>
                     <p class="mb-1 mt-4">Alamat : Di Tempat</p>
                     <p>Jln. Tua, Buduk, Gang Cepaka No.15, Mengwi, Badung, Bali</p>
+                    <iframe
+                        class="rounded-4"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3944.9025166764054!2d115.1481438!3d-8.6053577!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23905c2d312d3%3A0x224da10bf90693f!2sJl.%20Desa%20Cepaka%2015-181%2C%20Cepaka%2C%20Kec.%20Kediri%2C%20Kabupaten%20Tabanan%2C%20Bali%2080351!5e0!3m2!1sid!2sid!4v1694601914357!5m2!1sid!2sid"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <a href="https://goo.gl/maps/2q8f7cSjTKvTrJ366" target="_blank" class="btn my-4 btn-sm">Buka
                         Peta</a>
                 </div>
@@ -423,33 +426,38 @@
     });
 
 </script>
+
 <script>
-    const rootElement = document.querySelector(':root')
+    // const rootElement = document.querySelector(':root')
     const song = document.querySelector('#song')
     const audioIcon = document.querySelector('.audio-icon')
     const audioKu = document.querySelector('.audio-icon i')
-    let isPlay = false
+    // let isPlay = true
 
-    function disableScroll() {
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        scrollLeft = window.pageX0ffset || document.documentElement.scrollLeft;
+    // function disableScroll() {
+    //     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //     scrollLeft = window.pageX0ffset || document.documentElement.scrollLeft;
 
-        window.onscroll = function () {
-            window.scrollTo(scrollTop, scrollLeft);
-        }
-        rootElement.style.scrollBehavior = 'auto'
-    }
-    function enableScroll(params) {
-        window.onscroll = function () { }
-        rootElement.style.scrollBehavior = 'smooth';
-        playAudio()
-        // localStorage.setItem('opened', 'true')    
-    }
-    function playAudio() {
-        audioIcon.style.display = 'flex'
-        song.play();
-        isPlay = true;
-    }
+    //     window.onscroll = function () {
+    //         window.scrollTo(scrollTop, scrollLeft);
+    //     }
+    //     rootElement.style.scrollBehavior = 'auto'
+    // }
+    // function enableScroll(params) {
+    //     window.onscroll = function () { }
+    //     rootElement.style.scrollBehavior = 'smooth';
+    //     playAudio()
+    //     // localStorage.setItem('opened', 'true')    
+    // }
+
+    audioIcon.style.display = 'flex'
+    song.play();
+    isPlay = true;
+
+    // function playAudio() {
+    // }
+
+
     // if (!localStorage.getItem('opened')) {
     //     disableScroll()
     // }
@@ -465,7 +473,7 @@
         }
         isPlay = !isPlay
     }
-    disableScroll()
+    // disableScroll()
 </script>
 
 <script>
@@ -476,7 +484,10 @@
     const namaUrl = document.querySelector('.hero .yth span')
     namaUrl.innerText = nama
 
+    document.querySelector('#nama').value = nama
+
 </script>
+
 
 
 
