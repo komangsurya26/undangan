@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Questrial&family=Roboto:wght@100;400;700&family=Sacramento&display=swap');
 
-
 :root {
     --colbut: #C69C6D;
     --shadow: 0 2px 2px rgba(0, 0, 0, .5);
@@ -123,6 +122,37 @@ body.lock-scroll {
     font-family: var(--biasa);
     color: white;
 }
+
+.boxku {
+    border: 3px solid var(--colbut);
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    color: black;
+    background-image: url('https://res.cloudinary.com/dgamlqpae/image/upload/v1694771197/ads_bweyim.jpg');
+    background-size: cover;
+    filter: brightness(.9);
+    
+}
+
+.boxku h3 {
+    font-family: var(--om);
+    color: #C69C6D;
+    margin-bottom: 2rem;
+}
+.boxku h1 {
+    font-size: 4rem;
+}
+
+/* acara */
+
+.acara {
+    padding: 150px;
+    padding-top: 50px;
+    justify-content: center;
+}
+
 
 
 
@@ -386,6 +416,7 @@ footer svg:hover {
         width: 350px;
         height: 350px;
     }
+   
 
 }
 
@@ -489,6 +520,11 @@ footer svg:hover {
         font-size: 4rem;
         transform: translate(-50%, -50%);
     }
+    .acara {
+        padding: 10px;
+        padding-top: 50px;
+        justify-content: center;
+    }
    
 }
 
@@ -531,6 +567,11 @@ footer svg:hover {
         left: -13px;
         right: auto;
     }
+    .acara {
+        padding: 10px;
+        padding-top: 50px;
+        justify-content: center;
+    }
    
 }
 
@@ -564,5 +605,10 @@ footer svg:hover {
         border-right-width: 14px;
         left: -13px;
         right: auto;
+    }
+    .acara {
+        padding: 10px;
+        padding-top: 50px;
+        justify-content: center;
     }
 }
