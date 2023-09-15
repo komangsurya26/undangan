@@ -365,8 +365,14 @@ footer svg:hover {
     cursor: pointer;
 }
 
+.count1{
+    text-align: center;
+}
 
-
+.hari-bahagia-img {
+    width: 80px;
+    margin: 20px;
+}
 
 
 /* Media Query */
